@@ -3,7 +3,7 @@ package atendimento;
 import app.Console;
 import produto.*;
 
-public class Pedido implements Console {
+public class Pedido {
     private String mesa;
     private Pizza pizza_pedido;
     private Bebida bebida_pedido;
@@ -41,12 +41,18 @@ public class Pedido implements Console {
         this.bebida_pedido = bebida_pedido;
     }
     
-    public double totalPedido(double totalPedido){
+    public double totalPedido(double totalPedido, double valor_pizza,double valor_bebida){
+        valor_pizza = this.pizza_pedido.getPreco();
+        valor_bebida = this.bebida_pedido.getPreco();
+        totalPedido  = valor_pizza + valor_bebida;
         return totalPedido;
     }
 
-    @Override
-    public void imprimir() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void imprimir(Pedido p) {
+        System.out.println("\t--Pedido mesa " + this.mesa + "--");
+        System.out.println("\nPizza: " +  this.pizza_pedido.getNome() + " (R$" + this.pizza_pedido.getPreco() + ")" 
+                + "\nBebida:" + this.bebida_pedido.getNome() + " (R$" + this.bebida_pedido.getPreco() + ")" 
+                +  "--------------------------------------------------------------" 
+                + "\nValor Total: R$" + p.totalPedido(0, this.pizza_pedido.getPreco(), this.bebida_pedido.getPreco()));               
     }
 }
