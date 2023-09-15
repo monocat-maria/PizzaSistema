@@ -9,11 +9,8 @@ public class Cardapio implements Console {
     private String nome_pizzaria;
     private ArrayList<Pizza> pizzas = new ArrayList();
     private ArrayList<Bebida> bebidas = new ArrayList();
-
-    public Cardapio() {
-    }
     
-    public Cardapio(String nome_pizzaria) {
+    public Cardapio() {
         this.nome_pizzaria = "Pizza Planet";
         this.pizzas.add(mussarela);
         this.pizzas.add(marguerita);
@@ -70,7 +67,25 @@ public class Cardapio implements Console {
     Pizza chocolate = new Pizza("Chocolate",32.90,"doce","nutella,morango e brigadeiro");
      
     @Override
-    public void imprimir() {       
-    }   
-    
+    public void imprimir() {
+        System.out.println("----Bem Vindo ao " + this.nome_pizzaria  + "!---");
+        System.out.println("\n\tCARDÁPIO");
+        System.out.println("PIZZAS SALGADAS");
+        System.out.println(this.mussarela.getNome() + "     R$" + this.mussarela.getPreco()  
+                + "\n" + this.marguerita.getNome() + "    R$" + this.mussarela.getPreco() 
+                + "\n" + this.calabresa.getNome() + "     R$" + this.calabresa.getPreco()
+                + "\n" + this.frango.getNome() + "        R$" + this.frango.getPreco()
+                + "\n" + this.portuguesa.getNome() + "    R$" + this.portuguesa.getPreco()
+                + "\n" + this.banana.getNome() + "        R$" + this.banana.getPreco()
+                + "\n" + this.chocolate.getNome() + "     R$" + this.chocolate.getPreco());
+        System.out.println("\nPIZZAS DOCES");
+        System.out.println(this.banana.getNome() + "        R$" + this.banana.getPreco()  
+                + "\n" + this.chocolate.getNome() + "     R$" + this.chocolate.getPreco());
+        System.out.println("\nBEBIDAS");
+        System.out.println(this.agua.getNome() + "                 R$" + this.agua.getPreco()  
+                + "\n" + this.coca.getNome() + "            R$" + this.coca.getPreco() 
+                + "\n" + this.guarana.getNome() + "    R$" + this.guarana.getPreco()
+                + "\n" + this.fanta.getNome() + "        R$" + this.fanta.getPreco()
+                + "\n" + this.suco.getNome() + "      R$" + this.suco.getPreco());
+    }       
 }

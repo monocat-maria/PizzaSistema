@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Pizza implements Console {
     private String nome;
-    private float tamanho;
+    private int tamanho;
     private double preco;
     private String tipo_sabor;
     private ArrayList <String> ingredientes =  new ArrayList();
@@ -15,7 +15,7 @@ public class Pizza implements Console {
 
     public Pizza(String nome, double preco, String tipo_sabor,String e) {
         this.nome = nome;
-        this.tamanho = 35f;
+        this.tamanho = 35;
         this.preco = preco;
         this.tipo_sabor = tipo_sabor;
         this.ingredientes.add(e);
@@ -45,7 +45,7 @@ public class Pizza implements Console {
         this.nome = nome;
     }
 
-    public void setTamanho(float tamanho) {
+    public void setTamanho(int tamanho) {
         this.tamanho = tamanho;
     }
 
