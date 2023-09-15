@@ -13,11 +13,12 @@ public class Pizza implements Console {
     public Pizza() {
     }
 
-    public Pizza(String nome, float tamanho, double preco, String tipo_sabor) {
+    public Pizza(String nome, double preco, String tipo_sabor,String e) {
         this.nome = nome;
-        this.tamanho = tamanho;
+        this.tamanho = 35f;
         this.preco = preco;
         this.tipo_sabor = tipo_sabor;
+        this.ingredientes.add(e);
     }
 
     public String getNome() {
@@ -70,9 +71,5 @@ public class Pizza implements Console {
         for(int i = 0;i < this.ingredientes.size();i++){
             System.out.println("Igredientes:" +  this.ingredientes.get(i));
         }
-    }
-    
-    
-    
-    
+    }   
 }
