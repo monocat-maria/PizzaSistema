@@ -6,17 +6,17 @@ import java.util.ArrayList;
 public class Pizza implements Console {
     private String nome;
     private float tamanho;
-    private double preço;
+    private double preco;
     private String tipo_sabor;
     private ArrayList <String> ingredientes =  new ArrayList();
 
     public Pizza() {
     }
 
-    public Pizza(String nome, float tamanho, double preço, String tipo_sabor) {
+    public Pizza(String nome, float tamanho, double preco, String tipo_sabor) {
         this.nome = nome;
         this.tamanho = tamanho;
-        this.preço = preço;
+        this.preco = preco;
         this.tipo_sabor = tipo_sabor;
     }
 
@@ -28,8 +28,8 @@ public class Pizza implements Console {
         return tamanho;
     }
 
-    public double getPreço() {
-        return preço;
+    public double getPreco() {
+        return preco;
     }
 
     public String getTipo_sabor() {
@@ -48,8 +48,8 @@ public class Pizza implements Console {
         this.tamanho = tamanho;
     }
 
-    public void setPreço(double preço) {
-        this.preço = preço;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
     public void setTipo_sabor(String tipo_sabor) {
@@ -62,7 +62,14 @@ public class Pizza implements Console {
 
     @Override
     public void imprimir() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("\nPizza");
+        System.out.println("\nNome:" + this.nome 
+                + "\nTamanho:" + this.tamanho  + " cm" 
+                + "\nPreço:" + this.preco 
+                + "\nTipo de sabor:" + this.tipo_sabor);
+        for(int i = 0;i < this.ingredientes.size();i++){
+            System.out.println("Igredientes:" +  this.ingredientes.get(i));
+        }
     }
     
     

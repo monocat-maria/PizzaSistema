@@ -5,15 +5,15 @@ import app.Console;
 public class Bebida  implements Console {
     private String nome;
     private double ml;
-    private double preço;
+    private double preco;
 
     public Bebida() {
     }
 
-    public Bebida(String nome, double ml, double preço) {
+    public Bebida(String nome, double ml, double preco) {
         this.nome = nome;
         this.ml = ml;
-        this.preço = preço;
+        this.preco = preco;
     }
 
     public String getNome() {
@@ -24,8 +24,8 @@ public class Bebida  implements Console {
         return ml;
     }
 
-    public double getPreço() {
-        return preço;
+    public double getPreco() {
+        return preco;
     }
 
     public void setNome(String nome) {
@@ -37,13 +37,14 @@ public class Bebida  implements Console {
     }
 
     public void setPreço(double preço) {
-        this.preço = preço;
+        this.preco = preco;
     }
 
     @Override
     public void imprimir() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
-    
+        System.out.println("\nBebida");
+        System.out.println("\nNome:" + this.nome 
+                + "\nQuantidade:" + this.ml  + " ml" 
+                + "\nPreço:" + this.preco);
+    }    
 }
