@@ -1,6 +1,8 @@
 package produto;
 
-public class Bebida {
+import app.Console;
+
+public class Bebida  implements Console {
     private String nome;
     private double ml;
     private double preço;
@@ -36,6 +38,11 @@ public class Bebida {
 
     public void setPreço(double preço) {
         this.preço = preço;
+    }
+
+    @Override
+    public void imprimir() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     

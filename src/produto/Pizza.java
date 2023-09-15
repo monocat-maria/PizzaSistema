@@ -1,8 +1,9 @@
 package produto;
 
+import app.Console;
 import java.util.ArrayList;
 
-public class Pizza {
+public class Pizza implements Console {
     private String nome;
     private float tamanho;
     private double preço;
@@ -57,6 +58,11 @@ public class Pizza {
 
     public void setIngredientes(String i) {
         this.ingredientes.add(i);
+    }
+
+    @Override
+    public void imprimir() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     
