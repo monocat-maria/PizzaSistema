@@ -22,6 +22,11 @@ public class Cardapio implements Console {
         this.pizzas.add(portuguesa);
         this.pizzas.add(banana);
         this.pizzas.add(chocolate);
+        this.bebidas.add(agua);
+        this.bebidas.add(coca);
+        this.bebidas.add(guarana);
+        this.bebidas.add(fanta);
+        this.bebidas.add(suco);
     }
 
     public String getNome_pizzaria() {
@@ -47,6 +52,13 @@ public class Cardapio implements Console {
     public void setBebidas(Bebida b) {
         this.bebidas.add(b);
     }
+    
+    //Bebidas Disponiveis
+    Bebida agua = new Bebida("Água",200,5.00);
+    Bebida coca = new Bebida("Coca Cola",350,3.50);
+    Bebida guarana = new Bebida("Guaraná Antardida",350,3.50);
+    Bebida fanta =  new  Bebida("Fanta Laranja",1000,6.00);
+    Bebida suco  =  new Bebida("Suco de Laranja",500,9.00);
     
     //Pizzas Disponiveis
     Pizza mussarela = new Pizza("Mussarela",24.90,"salgada","mussarela,orégano e azeitona");
