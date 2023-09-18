@@ -42,11 +42,11 @@ public class Cardapio implements Console {
         this.nome_pizzaria = nome_pizzaria;
     }
 
-    public void setPizzas(Pizza p) {
+    public void addPizzas(Pizza p) {
         this.pizzas.add(p);
     }
 
-    public void setBebidas(Bebida b) {
+    public void addBebidas(Bebida b) {
         this.bebidas.add(b);
     }
     
@@ -65,27 +65,22 @@ public class Cardapio implements Console {
     Pizza portuguesa = new Pizza("Portuguesa",29.90,"salgada","mussarela,presunto,ervilha,ovo,tomate,cebola e orégano");
     Pizza banana  = new Pizza("Banana",31.90,"doce","mussarela,creme de leite,banana e canela");
     Pizza chocolate = new Pizza("Chocolate",32.90,"doce","nutella,morango e brigadeiro");
-     
+    
     @Override
-    public void imprimir() {
-        System.out.println("----Bem Vindo ao " + this.nome_pizzaria  + "!---");
-        System.out.println("\n\tCARDÁPIO");
-        System.out.println("PIZZAS SALGADAS");
-        System.out.println(this.mussarela.getNome() + "     R$" + this.mussarela.getPreco()  
-                + "\n" + this.marguerita.getNome() + "    R$" + this.mussarela.getPreco() 
-                + "\n" + this.calabresa.getNome() + "     R$" + this.calabresa.getPreco()
-                + "\n" + this.frango.getNome() + "        R$" + this.frango.getPreco()
-                + "\n" + this.portuguesa.getNome() + "    R$" + this.portuguesa.getPreco()
-                + "\n" + this.banana.getNome() + "        R$" + this.banana.getPreco()
-                + "\n" + this.chocolate.getNome() + "     R$" + this.chocolate.getPreco());
-        System.out.println("\nPIZZAS DOCES");
-        System.out.println(this.banana.getNome() + "        R$" + this.banana.getPreco()  
-                + "\n" + this.chocolate.getNome() + "     R$" + this.chocolate.getPreco());
-        System.out.println("\nBEBIDAS");
-        System.out.println(this.agua.getNome() + "                 R$" + this.agua.getPreco()  
-                + "\n" + this.coca.getNome() + "            R$" + this.coca.getPreco() 
-                + "\n" + this.guarana.getNome() + "    R$" + this.guarana.getPreco()
-                + "\n" + this.fanta.getNome() + "        R$" + this.fanta.getPreco()
-                + "\n" + this.suco.getNome() + "      R$" + this.suco.getPreco());
+    public void imprimir() {    
+        System.out.println("\t--CARDÁPIO--");
+        System.out.println("PIZZAS");
+        for(int i = 0;i < this.pizzas.size();i++){   
+            System.out.println(i + " - " + this.pizzas.get(i).getNome() + "       R$" + this.pizzas.get(i).getPreco());
+            for(int j = 0; j < this.pizzas.get(i).getIngredientes().size();j++){
+                System.out.println(this.pizzas.get(i).getIngredientes().get(j));
+                System.out.println();
+            }
+        }
+        
+        System.out.println("BEBIDAS");
+        for(int i = 0;i < this.bebidas.size();i++){
+            System.out.println(i + " - " + this.bebidas.get(i).getNome()+ "     R$" + this.bebidas.get(i).getPreco());
+        }
     }       
 }

@@ -57,8 +57,8 @@ public class Pizza implements Console {
         this.tipo_sabor = tipo_sabor;
     }
 
-    public void setIngredientes(String i) {
-        this.ingredientes.add(i);
+    public void setIngredientes(String e) {
+        this.ingredientes.add(e);
     }
 
     @Override

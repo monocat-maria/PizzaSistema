@@ -36,7 +36,7 @@ public class Bebida  implements Console {
         this.ml = ml;
     }
 
-    public void setPreço(double preço) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 

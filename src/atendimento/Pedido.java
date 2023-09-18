@@ -49,10 +49,11 @@ public class Pedido {
     }
 
     public void imprimir(Pedido p) {
-        System.out.println("\t--Pedido mesa " + this.mesa + "--");
-        System.out.println("\nPizza: " +  this.pizza_pedido.getNome() + " (R$" + this.pizza_pedido.getPreco() + ")" 
+        System.out.println("\n--PEDIDO MESA " + this.mesa + "--");
+        System.out.println("Pizza: " +  this.pizza_pedido.getNome() + " (R$" + this.pizza_pedido.getPreco() + ")" 
                 + "\nBebida:" + this.bebida_pedido.getNome() + " (R$" + this.bebida_pedido.getPreco() + ")" 
-                +  "--------------------------------------------------------------" 
-                + "\nValor Total: R$" + p.totalPedido(0, this.pizza_pedido.getPreco(), this.bebida_pedido.getPreco()));               
+                +   "\n----------------------------------" 
+                + "\nValor Total: R$" + p.totalPedido(0, this.pizza_pedido.getPreco(), this.bebida_pedido.getPreco()));
+        System.out.println();
     }
 }
